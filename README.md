@@ -160,6 +160,6 @@ Ketiga foreign key memakai `ON DELETE SET NULL` dan `ON UPDATE CASCADE`, sehingg
 
 Screen record hasil pengujian aplikasi:
 
-[CRUD Departments](https://github.com/user-attachments/assets/41df75a8-6e9a-4439-b5b7-747de029e5d4)
-[CRUD Lecturers](https://github.com/user-attachments/assets/95bf05c9-3ef9-4bb4-b3d3-e60fe43f72e6)
-[CRUD Courses](https://github.com/user-attachments/assets/0bbfa073-f5d8-4ae4-9a33-7f28e9f2bcf7)
+[CRUD Departments](https://github.com/user-attachments/assets/1d071f62-3808-4a46-a931-29934ed4434b)
+[CRUD Lecturers](https://github.com/user-attachments/assets/6a4b1595-596c-48e2-86f3-a4b02b3b06eb)
+[CRUD Courses](https://github.com/user-attachments/assets/310d44a1-b747-4e59-b449-f20b7ec031a8)
