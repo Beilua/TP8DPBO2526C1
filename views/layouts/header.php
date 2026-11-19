@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <?php // page meta and styles ?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TP8 MVC</title>
   <link href="assets/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<?php // main navigation ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php">TP8 MVC</a>
@@ -19,4 +21,5 @@
     </div>
   </div>
 </nav>
+<?php // open page container ?>
 <div class="container my-4">

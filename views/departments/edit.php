@@ -1,4 +1,5 @@
 <?php require __DIR__ . '/../layouts/header.php'; ?>
+<?php // update department form ?>
 <div class="col-lg-6 m-auto">
   <form method="post">
     <br><br>

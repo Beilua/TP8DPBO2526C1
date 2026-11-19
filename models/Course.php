@@ -1,12 +1,16 @@
 <?php
 require_once __DIR__ . '/../config/database.php';
 
+// course data access class
 class Course {
+    // database connection
     private $conn;
+    // get shared connection
     public function __construct() {
         $this->conn = Database::getInstance()->getConnection();
     }
 
+    // fetch all courses with lecturer and department names
     public function all() {
         $sql = "SELECT c.*, l.name AS lecturer_name, d.name AS department_name
                 FROM courses c
@@ -17,6 +21,7 @@ class Course {
         return $res ? $res->fetch_all(MYSQLI_ASSOC) : [];
     }
 
+    // find one course by id
     public function find($id) {
         $stmt = $this->conn->prepare("SELECT * FROM courses WHERE id = ?");
         $stmt->bind_param("i", $id);
@@ -26,6 +31,7 @@ class Course {
         return $row;
     }
 
+    // insert new course
     public function create($data) {
         $stmt = $this->conn->prepare("INSERT INTO courses (name, credits, lecturer_id, department_id) VALUES (?,?,?,?)");
         $stmt->bind_param("siii", $data['name'], $data['credits'], $data['lecturer_id'], $data['department_id']);
@@ -34,6 +40,7 @@ class Course {
         return $ok;
     }
 
+    // update existing course
     public function update($id, $data) {
         $stmt = $this->conn->prepare("UPDATE courses SET name=?, credits=?, lecturer_id=?, department_id=? WHERE id=?");
         $stmt->bind_param("siiii", $data['name'], $data['credits'], $data['lecturer_id'], $data['department_id'], $id);
@@ -42,6 +49,7 @@ class Course {
         return $ok;
     }
 
+    // delete course by id
     public function delete($id) {
         $stmt = $this->conn->prepare("DELETE FROM courses WHERE id = ?");
         $stmt->bind_param("i", $id);

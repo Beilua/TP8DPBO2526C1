@@ -1,4 +1,5 @@
 <?php require __DIR__ . '/../layouts/header.php'; ?>
+<?php // create lecturer form ?>
 <div class="col-lg-6 m-auto">
   <form method="post">
     <br><br>
@@ -17,6 +18,7 @@
       <label>DEPARTMENT:</label>
       <select name="department_id" class="form-control">
         <option value="">-- none --</option>
+        <?php // department options ?>
         <?php foreach ($departments as $d): ?>
           <option value="<?= $d['id'] ?>"><?= htmlspecialchars($d['name']) ?></option>
         <?php endforeach; ?>

@@ -1,4 +1,5 @@
 <?php require __DIR__ . '/../layouts/header.php'; ?>
+<?php // update lecturer form ?>
 <div class="col-lg-6 m-auto">
   <form method="post">
     <br><br>
@@ -18,6 +19,7 @@
       <label>DEPARTMENT:</label>
       <select name="department_id" class="form-control">
         <option value="">-- none --</option>
+        <?php // department options with selected value ?>
         <?php foreach ($departments as $d): ?>
           <option value="<?= $d['id'] ?>" <?= ($lecturer['department_id'] == $d['id']) ? 'selected' : '' ?>><?= htmlspecialchars($d['name']) ?></option>
         <?php endforeach; ?>

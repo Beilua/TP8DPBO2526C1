@@ -1,8 +1,10 @@
 <?php require __DIR__ . '/../layouts/header.php'; ?>
+<?php // lecturer page title and add button ?>
 <div class="d-flex justify-content-between align-items-center mb-3">
   <h2>Lecturers</h2>
   <a class="btn btn-primary" href="index.php?c=lecturer&a=create">Add New</a>
 </div>
+<?php // lecturer list table ?>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -10,6 +12,7 @@
     </tr>
   </thead>
   <tbody>
+    <?php // lecturer rows with edit and delete actions ?>
     <?php foreach ($lecturers as $row): ?>
     <tr>
       <th><?= htmlspecialchars($row['id']) ?></th>
